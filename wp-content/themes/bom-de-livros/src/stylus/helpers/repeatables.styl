@@ -1,0 +1,151 @@
+.center-content
+    width 100%
+    margin auto
+    z-index 2
+    margin-left auto
+    margin-right auto
+
+    @media $smallest-desktop-minmax
+        padding 0 10px
+
+    &:not(.not-relative)
+        position relative
+
+    &:not(.nopadding)
+        @media $tablet-max
+            padding-left 15px
+            padding-right 15px
+
+    &:not(.bigger)
+        @media $small-desktop-min
+            width $contextPX
+
+        @media $smallest-desktop-minmax
+            width $smallerContextPX !important
+
+    &.bigger
+        @media $small-desktop-min
+            width $contextPX
+
+        @media $xl-desktop-min
+            width $biggerContextPX
+
+        @media $smallest-desktop-minmax
+            width $smallerContextPX !important
+
+    &:not(.unlimited)
+        @media $tablet-max
+            max-width 320px
+
+    .center-content
+        @media $tablet-max
+            padding 0 !important
+
+.full
+	display block
+	width 100%
+
+.flexed
+    &:not(.keep-flex)
+        @media $small-desktop-min
+            display flex
+
+    &.keep-flex
+        display flex
+
+.row
+    &:not(.keep-flex)
+        @media $small-desktop-min
+            flex-flow row wrap
+
+    &.keep-flex
+        flex-flow row wrap
+
+.spaced
+    &:not(.keep-flex)
+        @media $small-desktop-min
+            justify-content space-between
+
+    &.keep-flex
+        justify-content space-between
+
+.centered
+    &:not(.keep-flex)
+        @media $small-desktop-min
+            align-items center
+
+    &.keep-flex
+        align-items center
+
+.start
+    &:not(.keep-flex)
+        @media $small-desktop-min
+            align-items flex-start
+
+    &.keep-flex
+        align-items flex-start
+
+.dibfather
+    font-size: 0
+
+.dib
+    display inline-block
+    vertical-align top
+
+.cleared
+    &:after
+        content ''
+        display block
+        clear both
+
+.transitioned-basic
+    transition all .2s ease-in-out
+
+.hideonmobile
+    @media $tablet-max
+        display none !important
+
+.mobile-only
+    @media $small-desktop-min
+        display none !important
+
+.has-low-border
+    position relative
+    padding-bottom 13px
+
+    &:after
+        content ''
+        display block
+        position absolute
+        bottom 0
+        width 90%
+        background-color $regularBlue
+        height 2px
+
+
+    &:before
+        content ''
+        display block
+        position absolute
+        left 0
+        height 3px
+        background-color $regularBlue
+        width 84px
+
+        @media $tablet-max
+            bottom -2px
+
+        @media $small-desktop-min
+            bottom -3px
+
+    &.smaller-border
+        padding-bottom 8px
+
+        &:after
+            width 85%
+
+.block
+    display block
+
+.ml-auto
+    margin-left auto

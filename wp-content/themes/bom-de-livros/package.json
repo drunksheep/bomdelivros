@@ -1,0 +1,30 @@
+{
+  "name": "bom-de-livros",
+  "version": "1.0.0",
+  "description": "Novo tema sem construtor de páginas",
+  "author": "André Facchini",
+  "person": {
+    "name": "André Facchini",
+    "email": "andre3facchini@gmail.com",
+    "url": "https://twitter.com/@dokkodojs"
+  },
+  "repository": "github:drunksheep/bomdelivros",
+  "license": "MIT",
+  "homepage": "https://github.com/drunksheep/bomdelivros/",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "autoprefixer": "^9.8.6",
+    "cssnano": "*",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-stylus": "*",
+    "gulp-terser": "^1.4.1"
+  }
+}
