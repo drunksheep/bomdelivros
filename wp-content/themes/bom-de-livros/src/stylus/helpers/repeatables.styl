@@ -1,151 +1,224 @@
-.center-content
-    width 100%
-    margin auto
-    z-index 2
-    margin-left auto
-    margin-right auto
+.center-content {
+    width: 100%;
+    margin: auto;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
 
-    @media $smallest-desktop-minmax
-        padding 0 10px
+    @media $smallest-desktop-minmax {
+        padding: 0 10px;
+    }
 
-    &:not(.not-relative)
-        position relative
+    &:not(.not-relative) {
+        position: relative;
+    }
 
-    &:not(.nopadding)
-        @media $tablet-max
-            padding-left 15px
-            padding-right 15px
+    &:not(.nopadding) {
+        @media $tablet-max {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
 
-    &:not(.bigger)
-        @media $small-desktop-min
-            width $contextPX
+    &:not(.bigger) {
+        @media $small-desktop-min {
+            width: $contextPX;
+        }
 
-        @media $smallest-desktop-minmax
-            width $smallerContextPX !important
+        @media $smallest-desktop-minmax {
+            width: $smallerContextPX !important;
+        }
+    }
 
-    &.bigger
-        @media $small-desktop-min
-            width $contextPX
+    &.bigger {
+        @media $small-desktop-min {
+            width: $contextPX;
+        }
 
-        @media $xl-desktop-min
-            width $biggerContextPX
+        @media $xl-desktop-min {
+            width: $biggerContextPX;
+        }
 
-        @media $smallest-desktop-minmax
-            width $smallerContextPX !important
+        @media $smallest-desktop-minmax {
+            width: $smallerContextPX !important;
+        }
+    }
 
-    &:not(.unlimited)
-        @media $tablet-max
-            max-width 320px
+    &:not(.unlimited) {
+        @media $tablet-max {
+            max-width: 320px;
+        }
+    }
 
-    .center-content
-        @media $tablet-max
-            padding 0 !important
+    .center-content {
+        @media $tablet-max {
+            padding: 0 !important;
+        }
+    }
+}
 
-.full
-	display block
-	width 100%
+.full {
+    display: block;
+    width: 100%;
+}
 
-.flexed
-    &:not(.keep-flex)
-        @media $small-desktop-min
-            display flex
+.flexed {
+    &:not(.keep-flex) {
+        @media $small-desktop-min {
+            display: flex;
+        }
+    }
 
-    &.keep-flex
-        display flex
+    &.keep-flex {
+        display: flex;
+    }
+}
 
-.row
-    &:not(.keep-flex)
-        @media $small-desktop-min
-            flex-flow row wrap
+.row {
+    &:not(.keep-flex) {
+        @media $small-desktop-min {
+            flex-flow: row wrap;
+        }
+    }
 
-    &.keep-flex
-        flex-flow row wrap
+    &.keep-flex {
+        flex-flow: row wrap;
+    }
+}
 
-.spaced
-    &:not(.keep-flex)
-        @media $small-desktop-min
-            justify-content space-between
+.spaced {
+    &:not(.keep-flex) {
+        @media $small-desktop-min {
+            justify-content: space-between;
+        }
+    }
 
-    &.keep-flex
-        justify-content space-between
+    &.keep-flex {
+        justify-content: space-between;
+    }
+}
 
-.centered
-    &:not(.keep-flex)
-        @media $small-desktop-min
-            align-items center
+.centered {
+    &:not(.keep-flex) {
+        @media $small-desktop-min {
+            align-items: center;
+        }
+    }
 
-    &.keep-flex
-        align-items center
+    &.keep-flex {
+        align-items: center;
+    }
+}
 
-.start
-    &:not(.keep-flex)
-        @media $small-desktop-min
-            align-items flex-start
+.start {
+    &:not(.keep-flex) {
+        @media $small-desktop-min {
+            align-items: flex-start;
+        }
+    }
 
-    &.keep-flex
-        align-items flex-start
+    &.keep-flex {
+        align-items: flex-start;
+    }
+}
 
-.dibfather
-    font-size: 0
+.dibfather {
+    font-size: 0;
+}
 
-.dib
-    display inline-block
-    vertical-align top
+.dib {
+    display: inline-block;
+    vertical-align: top;
+}
 
-.cleared
-    &:after
-        content ''
-        display block
-        clear both
+.cleared {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
 
-.transitioned-basic
-    transition all .2s ease-in-out
+.transitioned-basic {
+    transition: all 0.2s ease-in-out;
+}
 
-.hideonmobile
-    @media $tablet-max
-        display none !important
+.hideonmobile {
+    @media $tablet-max {
+        display: none !important;
+    }
+}
 
-.mobile-only
-    @media $small-desktop-min
-        display none !important
+.mobile-only {
+    @media $small-desktop-min {
+        display: none !important;
+    }
+}
 
-.has-low-border
-    position relative
-    padding-bottom 13px
+.has-low-border {
+    position: relative;
+    padding-bottom: 13px;
 
-    &:after
-        content ''
-        display block
-        position absolute
-        bottom 0
-        width 90%
-        background-color $regularBlue
-        height 2px
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        background-color: $regularBlue;
+        height: 2px;
+    }
 
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        height: 3px;
+        background-color: $regularBlue;
+        width: 84px;
 
-    &:before
-        content ''
-        display block
-        position absolute
-        left 0
-        height 3px
-        background-color $regularBlue
-        width 84px
+        @media $tablet-max {
+            bottom: -2px;
+        }
 
-        @media $tablet-max
-            bottom -2px
+        @media $small-desktop-min {
+            bottom: -3px;
+        }
+    }
 
-        @media $small-desktop-min
-            bottom -3px
+    &.smaller-border {
+        padding-bottom: 8px;
 
-    &.smaller-border
-        padding-bottom 8px
+        &:after {
+            width: 85%;
+        }
+    }
+}
 
-        &:after
-            width 85%
+.block {
+    display: block;
+}
 
-.block
-    display block
+.ml-auto {
+    margin-left: auto;
+}
 
-.ml-auto
-    margin-left auto
+.mr-auto {
+    margin-right: auto;
+}
+
+.mx-auto {
+    @extend .ml-auto, .mr-auto;
+}
+
+.pos-r {
+    position: relative;
+}
+
+.first-section {
+    @media $small-desktop-min {
+        margin-top: $headerHeight;
+    }
+}
+

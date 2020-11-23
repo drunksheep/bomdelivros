@@ -1,12 +1,14 @@
 
-function init() {
-    
+const init = () => {
+    console.log('foo')
+
+    carouselInstancing();
 }
 
 // window load binds 
-window.onload = init;
+addEventListener('load', init);
 
-function DOMLoaded() {
+const DOMLoaded = () => {
     // these are not always necessary but sometimes they fuck with ya
     if (helpers.iOS) {
         document.querySelector('html').classList.add('ios');
@@ -16,4 +18,4 @@ function DOMLoaded() {
 }
 
 // domcontent binds 
-document.addEventListener('DOMContentLoaded', DOMLoaded);
+addEventListener('DOMContentLoaded', DOMLoaded);

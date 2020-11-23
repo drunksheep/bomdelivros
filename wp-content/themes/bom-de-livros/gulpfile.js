@@ -22,11 +22,16 @@ const config = {
     postCSSModules : [
         prefixes(),
         cssnano({ zindex: false, reduceIdents: false }),
-    ]
+    ], 
+    jsModules: {
+        tns: 'node_modules/tiny-slider/dist/tiny-slider.js',
+    }
 };
 
 gulp.task('js', () => {
-    return gulp.src(config.js.src)
+    let { tns } = config.jsModules;
+
+    return gulp.src([tns, config.js.src])
     .pipe(sourcemaps.init())
     .pipe(babel({
         presets : ['@babel/preset-env']

@@ -12,7 +12,9 @@
   "license": "MIT",
   "homepage": "https://github.com/drunksheep/bomdelivros/",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.14.0"
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "is-obj": "^2.0.0",
+    "tiny-slider": "^2.9.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

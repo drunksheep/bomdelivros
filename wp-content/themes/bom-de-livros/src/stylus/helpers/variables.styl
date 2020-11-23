@@ -8,22 +8,43 @@ $smallerContextPX = 1000px
 
 // this is the container width on which the mixin toPercentage will be based, if no second param is passed
 // also the base wrapper width on desktop resolutions
-$context = 1240
-$contextPX = 1240px
+$context = 1300
+$contextPX = 1300px
 
 // a bigger version of the container,
 // commonly used on headers and footers
 $biggerContext = 1500
 $biggerContextPX = 1500px
 
+// Header
+$headerHeight = 169px;
+
 
 // # fonts #
 // #########
-
+$os = 'Open Sans'
+$fa = 'Font Awesome 5 Free'
 
 // # colors #
 // ##########
+    
+$primary = #3781c3
+$primaryL10 = ligthen($primary, 10); 
+$primaryL20 = lighten($primary, 20);
+$primaryL30 = lighten($primary, 30)
+$primaryD10 = darken($primary, 10);
+$priamryD20 = darken($primary, 20);
 
+$secondary = darken(#fff6ef, 20);
+$secondaryL10 = ligthen($secondary, 10);
+$secondaryL20 = lighten($secondary, 20);
+$secondaryD10 = darken($secondary, 10);
+$secondaryD20 = darken($secondary, 20);
+
+$gray = #7b858a;
+
+$font = #333333; 
+$fontLig = lighten($font, 20);
 
 
 // ## BREAKPOINTS ##
