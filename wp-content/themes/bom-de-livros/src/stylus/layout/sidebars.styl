@@ -1,0 +1,45 @@
+#shop-sidebar {
+    @media $small-desktop-min {
+        padding-top: 5vh;
+        position: sticky;
+        top: 150px;
+    }
+
+    .widget-wrapper {
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid $primaryL20;
+
+        & + .widget-wrapper {
+            margin-top: 2vh;
+        }
+    }
+
+    .search-form {
+        @extend .pos-r;
+
+        #search {
+            @media $small-desktop-min {
+                width: 99%;
+                height: 42px;
+                border: 1px solid lighten($gray, 30);
+            }
+        }
+
+        .submit-search {
+            @media $small-desktop-min {
+                height: 42px;
+            }
+        }
+    }
+
+    .category-listing {
+        li {
+            & + li {
+                padding-top: 7px;
+                margin-top: 7px;
+                border-top: 1px solid $primaryL30;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.cms-wrapper {
+    p, li, address, legend, label {
+        @extend .t-s, .lh-r, .t-def;
+    }
+
+    li {
+        &:before {
+            content: '•';
+            color: $primary;
+            margin-right: 5px;
+        }
+    }
+
+    & > * + * {
+        margin-top: 20px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $primary;
+        font-weight: 700;
+    }
+
+    h1 {
+        @extend .t-xxxg;
+    }
+
+    h2 {
+        @extend .t-xxg;
+    }
+
+    h3 {
+        @extend .t-xg;
+    }
+
+    h4, h5, h6 {
+        @extend .t-g;
+    }
+
+    legend {
+        padding-top: 15px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: $primary;
+    }
+}

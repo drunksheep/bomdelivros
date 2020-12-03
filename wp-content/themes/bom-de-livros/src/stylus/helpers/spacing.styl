@@ -1,54 +1,91 @@
-.full 
-	display block
-	width 100%
-	clear both
+.full {
+	display: block;
+	width: 100%;
+	clear: both;
+}
 
-.half 
-	@media $small-desktop-min
-		width 47.5%
+.half {
+	@media $small-desktop-min {
+		width: 47.5%;
+	}
+}
 
-.half-child
-	@extend .half
+.half-child {
+	@extend .half;
 
-	& + .half-child:not(:nth-child(2n+3))
-		margin-left 5%
+	& + .half-child:not(:nth-child(2n+3)) {
+		margin-left: 5%;
+	}
+}
 
-.one-third
-	@media $small-desktop-min
-		width 31.66%
+.one-third {
+	@media $small-desktop-min {
+		width: 31.66%;
+	}
+}
 
-.one-third-child
-	@extend .one-third 
+.one-third-child {
+	@extend .one-third;
 
-	& + .one-third-child:not(:nth-of-type(3n+4))
-		margin-left 2.5%
+	& + .one-third-child:not(:nth-of-type(3n+4)) {
+		@media $small-desktop-min {
+			margin-left: 2.5%;
+		}
+	}
 
-.one-fourth
-	@media $small-desktop-min
-		width 23.75%
+	& + .one-third-child(n+4) {
+		@media $small-desktop-min {
+			margin-top: 3vh;
+		}
+	}
+}
 
-.one-fourth-child
-	@extend .one-fourth
+.one-fourth {
+	@media $small-desktop-min {
+		width: 23.75%;
+	}
+}
 
-	& + .one-fourth-child:not(:nth-of-type(4n+5))
-		@media $small-desktop-min
-			margin-left 1.666%
+.one-fourth-child {
+	@extend .one-fourth;
 
-.one-fifth
-	@media $small-desktop-min
-		width 18%
+	& + .one-fourth-child:not(:nth-of-type(4n+5)) {
+		@media $small-desktop-min {
+			margin-left: 1.666%;
+		}
+	}
 
-.one-fifth-child
-	@extend .one-fifth
+	& + .one-fourth-child(n+5) {
+		@media $small-desktop-min {
+			margin-top: 3vh;
+		}
+	}
+}
 
-	& + .one-fifth-child:not(:nth-of-type(5n+6))
-		@media $small-desktop-min
-			margin-left 2.5%
+.one-fifth {
+	@media $small-desktop-min {
+		width: 18%;
+	}
+}
 
-.two-thirds
-	@media $small-desktop-min
-		width 63.334% 
+.one-fifth-child {
+	@extend .one-fifth;
 
-	&:last-child
-		@media $small-desktop-min
-			margin-left 5%
+	& + .one-fifth-child:not(:nth-of-type(5n+6)) {
+		@media $small-desktop-min {
+			margin-left: 2.5%;
+		}
+	}
+}
+
+.two-thirds {
+	@media $small-desktop-min {
+		width: 63.334%;
+	}
+
+	&:last-child {
+		@media $small-desktop-min {
+			margin-left: 5%;
+		}
+	}
+}

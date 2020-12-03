@@ -1,0 +1,140 @@
+.woocommerce-cart-form {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border-top: 1px solid $primaryL30;
+        box-shadow: 0 0 10px 0 rgba(#000, 0.1);
+
+        td, th {
+            padding: 10px;
+            border: 1px solid #e1e1e1;
+            background-color: #fff;
+            @extend .t-def;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        th {
+            @extend .bold, .upper, .t-g;
+        }
+
+        td {
+            @extend .t-r;
+        }
+    }
+
+    .product-remove {
+        a {
+            padding: 0;
+            background: red;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            display: block;
+            line-height: 28px;
+            @extend .mx-auto, .t-white, .t-g, .t-centered;
+        }
+    }
+
+    .product-thumbnail {
+        img {
+            max-height: 100px;
+            max-width: 100px;
+            object-fit: cover;
+            margin: auto;
+        }
+    }
+
+    .product-quantity {
+        input {
+            @extend .field-minimal;
+        }
+    }
+
+    .actions {
+        button {
+            @extend .btn-primary, .t-s, .bold, .upper, .t-white, .rounded;
+            padding: 0 !important;
+            min-height: 40px;
+            width: 220px;
+        }
+    }
+
+    .coupon {
+        width: 38%;
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+
+        [name='coupon_code'] {
+            @extend .field-primary;
+            min-height: 40px;
+            border-radius: 10px;
+            width: 150px;
+        }
+    }
+
+    button[name='update_cart'] {
+        float: right;
+    }
+}
+
+.cart-collaterals {
+    padding-bottom: 5vh;
+
+    h2 {
+        @extend .margin;
+    }
+
+    table {
+        border: 1px solid #e1e1e1;
+        border-collapse: collapse;
+        width: 100%;
+        text-align: left;
+        vertical-align: middle;
+
+        th, td {
+            @extend .t-s, .lh-r, .t-def;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #e1e1e1;
+        }
+
+        th {
+            @extend .t-r, .lh-g, .bold, .upper;
+        }
+    }
+
+    .wc-proceed-to-checkout {
+        margin-top: 2vh;
+
+        a {
+            @extend .full, .btn-primary, .ml-auto, .t-g, .t-white, .upper, .bold, .rounded;
+        }
+    }
+}
+
+.cart-empty {
+    @extend .t-xg, .t-def, .bold, .upper;
+}
+
+.empty-cart {
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+
+    i {
+        font-size: 132px;
+    }
+
+    p {
+        font-size: 32px !important; 
+
+        & + p {
+            font-size: 18px !important;     
+        }
+    }
+}

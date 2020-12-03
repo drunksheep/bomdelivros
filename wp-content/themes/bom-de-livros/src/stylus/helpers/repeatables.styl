@@ -122,6 +122,32 @@
     }
 }
 
+.flexed-column {
+    &:not(.keep-flex) {
+        @media $small-desktop-min {
+            flex-flow: column wrap;
+        }
+    }
+
+    &.keep-flex {
+        flex-flow: column wrap;
+    }
+}
+
+.ai-between {
+    &:not(.keep-flex) {
+        @media $small-desktop-min {
+            display: flex;
+            align-items: space-between;
+        }
+    }
+
+    &.keep-flex {
+        display: flex;
+        align-items: space-between;
+    }
+}
+
 .dibfather {
     font-size: 0;
 }
@@ -222,3 +248,112 @@
     }
 }
 
+[class*='clamped-'] {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.clamped-2 {
+    -webkit-line-clamp: 2;
+}
+
+.cover-image {
+    AbsfillContainer();
+    object-fit: cover;
+}
+
+.link-primary {
+    @extend .transitioned-basic;
+
+    &:hover {
+        text-decoration: underline;
+        color: $primary;
+    }
+}
+
+.max-50 {
+    max-width: 50%;
+}
+
+.social-icons {
+    .social-icon {
+        padding: 12px;
+        border: 1.5px solid #e1e1e1;
+        font-size: 24px;
+        border-radius: 7px;
+        @extend .transitioned-basic;
+
+        &:hover {
+            background-color: lighten($gray, 20);
+        }
+
+        & + .social-icon {
+            @media $small-desktop-min {
+                margin-left: 3.5%;
+            }
+        }
+    }
+
+    .facebook {
+        i {
+            color: $facebook;
+        }
+
+        &:hover {
+            background-color: lighten($facebook, 40);
+        }
+    }
+
+    .youtube {
+        i {
+            color: $youtube;
+        }
+
+        &:hover {
+            background-color: lighten($youtube, 40);
+        }
+    }
+
+    .twitter {
+        i {
+            color: $twitter;
+        }
+
+        &:hover {
+            background-color: lighten($twitter, 40);
+        }
+    }
+
+    .linkedin {
+        i {
+            color: $linkedin;
+        }
+
+        &:hover {
+            background-color: lighten($linkedin, 40);
+        }
+    }
+
+    .instagram {
+        i {
+            color: $instagram;
+        }
+
+        &:hover {
+            background-color: lighten($instagram, 40);
+        }
+    }
+}
+
+.screen-reader-text {
+    display: none;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.w-100 {
+    width: 100%;
+}

@@ -56,7 +56,7 @@ div.forepart-text {
 
     .recommended-for-you {
         background-color: $secondaryL20;
-        
+
         &:before {
             width: 120px;
             height: 120px;
@@ -74,6 +74,20 @@ div.forepart-text {
 
     .popular-choices {
         background-color: $primaryL30;
+
+        &:before {
+            width: 300px;
+            height: 300px;
+            bottom: -60px;
+            left: -60px;
+        }
+
+        &:after {
+            width: 200px;
+            height: 200px;
+            top: 55px;
+            right: 30px;
+        }
     }
 
     .square-carousel {
@@ -140,6 +154,49 @@ div.forepart-text {
             &:before {
                 content: '\f054';
             }
+        }
+    }
+}
+
+// Bloco Destaque
+.featured-books {
+    background-color: $primaryL30;
+
+    @media $small-desktop-min {
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+    }
+}
+
+.featured-book {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 14px 15px;
+    box-shadow: 0 0 10px 0 rgba($primary, 0.1);
+
+    .fa-award {
+        @media $small-desktop-min {
+            font-size: 72px;
+        }
+    }
+}
+
+.featured-product-thumb-wrapper {
+    img {
+        border-radius: 10px;
+    }
+}
+
+// Bloco de estatísticas
+.icon-instance {
+    @media $small-desktop-min {
+        text-align: center;
+    }
+
+    i {
+        @media $small-desktop-min {
+            font-size: 58px;
+            color: $primary;
         }
     }
 }

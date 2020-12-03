@@ -5,3 +5,6 @@ require 'inc/functions/theme_bootstrap.php';
 
 // General Utilities
 require 'inc/functions/toolbox.php';
+
+// Actions 
+require 'inc/actions/actions.php';

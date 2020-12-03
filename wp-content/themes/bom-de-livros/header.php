@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <header id="masthead">
         <div class="center-content flexed row spaced centered nav-tab">
             <a href="" class="header-logo">
@@ -31,7 +31,7 @@
                 <?php get_search_form(); ?>
             </div>
             <div class="user-auth">
-                <a class="btn-primary" id="user-identification">
+                <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="btn-primary" id="user-identification">
                     <i class="fa fa-user t-primary"></i>
                     <span class="t-white">Login / Cadastre-se</span>
                 </a>

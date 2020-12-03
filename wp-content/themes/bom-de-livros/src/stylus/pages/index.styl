@@ -4,11 +4,13 @@
             min-height: 65vh;
             background-color: #e1e1e1;
             border-radius: 25px;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
         }
 
-
         @media $xl-desktop-min {
-            min-height: 55vh;    
+            min-height: 55vh;
         }
     }
 
@@ -44,5 +46,19 @@
 .home-recommended-block {
     @media $small-desktop-min {
         padding-bottom: 6vh;
+    }
+}
+
+.home-sale {
+    @media $small-desktop-min {
+        padding-bottom: 6vh;
+        padding-top: 3vh;
+    }
+}
+
+.home-icon-stats {
+    @media $small-desktop-min {
+        padding-top: 12vh;
+        padding-bottom: 12vh;
     }
 }

@@ -12,4 +12,16 @@ const carouselInstancing = () => {
             nav: false,
         })
     });
+
+    let saleCarouselElems = document.querySelectorAll('.sale-carousel');
+    saleCarouselElems.forEach( (val, key)  => {
+        let saleSlider = tns({
+            container: val,
+            items: 5,
+            edgePadding: 5, 
+            gutter: 60,
+            mouseDrag: true, 
+            nav: false, 
+        })
+    });
 }

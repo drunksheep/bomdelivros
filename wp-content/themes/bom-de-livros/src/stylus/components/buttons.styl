@@ -8,13 +8,47 @@
 	padding: 15px 40px;
 	transition: all 0.35s ease;
 
+	@media $small-desktop-min {
+		max-width: 320px;	
+	}
+
 	&.slimmer {
 		padding: 12px 45px;
+	}
+
+	&.slimmest {
+		padding: 10px 30px;
 	}
 
 	&.bigger {
 		padding: 20px 40px;
 	}
+
+	&.minimal {
+		padding: 7px 20px;
+	}
+
+	&.rounded {
+		border-radius: 8px;
+	}
+}
+
+.btn-primary {
+	&:not(#user-identification) {
+		@extend .btn-default;
+		background-color: $primary;
+		border: 1px solid $primary;
+	}
+
+	&:hover {
+		background-color: darken($primary, 20)	
+	}
+}
+
+.btn-primaryLig {
+	@extend .btn-default;
+	background-color: $primaryL20;
+	border: 1px solid $primaryL20;
 }
 
 .submit-search {
@@ -22,13 +56,17 @@
 	right: 0;
 	height: 100%;
 	width: 70px;
-	border: 0; 
+	border: 0;
 	background: lighten($primary, 20);
 	border-top-right-radius: 7px;
 	border-bottom-right-radius: 7px;
 	@extend .transitioned-basic;
-	
+
 	&:hover {
 		background: $primary;
 	}
+}
+
+.add-to-cart {
+	@extend .btn-primaryLig, .btn-default.minimal;
 }

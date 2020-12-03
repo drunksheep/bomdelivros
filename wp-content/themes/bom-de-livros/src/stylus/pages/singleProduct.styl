@@ -1,0 +1,114 @@
+.product-images {
+    @media $small-desktop-min {
+        width: 30%;
+        padding-top: 3vh;
+        position: relative;
+    }
+
+    .onsale {
+        @media $small-desktop-min {
+            left: 75px;
+            top: 65px;
+        }
+    }
+
+    .product-thumb-wrapper {
+        padding: 15px;
+        border: 1px solid lighten(#e1e1e1, 5);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(#000, 0.1);
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+            @media $small-desktop-min {
+                min-height: 320px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.summary {
+    @extend .cms-wrapper;
+
+    @media $small-desktop-min {
+        width: 68%;
+        padding-top: 3vh;
+    }
+
+    .quantity {
+        @extend .flexed, .spaced, .centered;
+
+        .qty {
+            @extend .field-minimal;
+        }
+    }
+
+    [name='add-to-cart'] {
+        @extend .btn-primary, .full, .ml-auto, .t-white, .t-xg, .upper, .bold, .rounded;
+        margin-top: 1.5vh;
+    }
+}
+
+.posted_in {
+    @extend .flexed, .row, .centered;
+
+    h3 {
+        @extend .t-def, .t-s, .lh-r, .full, .margin-xxs;
+    }
+
+    a {
+        @extend .t-s, .transitioned-basic, .t-white, .dib;
+        font-weight: 700;
+        padding: 5px;
+        background-color: $primary;
+        border-radius: 5px;
+        margin-right: 7px;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: $tertiary;
+        }
+    }
+}
+
+.woocommerce-tabs.wc-tabs-wrapper {
+    margin-top: 3vh;
+    padding-top: 3vh;
+    border-top: 5px dotted $primary;
+    width: 100%;
+}
+
+ul.tabs.wc-tabs {
+    @extend .flexed, .centered, .t-r, .t-def, .lh-g;
+
+    li {
+        @extend .btn-primary, .t-white, .rounded, .t-r, .bold, .upper;
+
+        & + li {
+            margin-left: 20px;
+        }
+    }
+}
+
+.woocommerce-Tabs-panel {
+    border: 1px solid #e1e1e1;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fafafa;
+    @extend .cms-wrapper;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.related.products {
+    padding-bottom: 4vh;
+
+    & > h2 {
+        @extend .t-exxxg, .bold, .margin, .full, .t-centered, .t-primary, .upper;
+    }
+}

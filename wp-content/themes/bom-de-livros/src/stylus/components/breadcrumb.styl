@@ -1,0 +1,65 @@
+.woocommerce-breadcrumb {
+    padding-top: 2.5vh !important;
+    padding-bottom: 2.5vh !important;
+    border-bottom: 1px solid $primaryL30 !important;
+    @extend .t-r, .t-def, .lh-g;
+
+    ol {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+
+    li {
+        &:first-of-type {
+            font-weight: 700;
+            color: $primary;
+            text-decoration: underline;
+            @extend .transitioned-basic;
+
+            &:hover {
+                color: $primaryD20;
+            }
+        }
+
+        &:not(:first-of-type) {
+            a {
+                @extend .link-primary;
+            }
+        }
+    }
+}
+
+.woocommerce {
+    .woocommerce-breadcrumb {
+    padding-top: 2.5vh !important;
+    padding-bottom: 2.5vh !important;
+    border-bottom: 1px solid $primaryL30 !important;
+    @extend .t-r, .t-def, .lh-g;
+
+    ol {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+
+    li {
+        &:first-of-type {
+            font-weight: 700;
+            color: $primary;
+            text-decoration: underline;
+            @extend .transitioned-basic;
+
+            &:hover {
+                color: $primaryD20;
+            }
+        }
+
+        &:not(:first-of-type) {
+            a {
+                @extend .link-primary;
+            }
+        }
+    }
+}    
+}

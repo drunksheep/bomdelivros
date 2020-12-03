@@ -1,0 +1,238 @@
+.woocommerce-MyAccount-navigation {
+    padding: 10px;
+    border: 2px solid $primary;
+    border-radius: 10px;
+
+    @media $small-desktop-min {
+        width: 35%;
+    }
+
+    ul {
+        @extend .t-r, .lh-g, .t-def;
+
+        li {
+            & + li {
+                padding-top: 5px;
+                margin-top: 5px;
+                border-top: 1px solid $primary;
+            }
+        }
+    }
+}
+
+.wocommerce-acc-nav {
+    @media $small-desktop-min {
+        width: 30%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+
+.woocommerce-MyAccount-content {
+    @media $small-desktop-min {
+        width: 65%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media $small-desktop-min {
+        width: 65%;
+    }
+
+    header.woocommerce-Address-title.title {
+        @extend .flexed, .row, .spaced, .centered;
+
+        &:before {
+            content: none;
+        }
+    }
+
+    address {
+        margin-top: 20px;
+    }
+
+    .edit {
+        font-size: 16px;
+        color: darken($primary, 10);
+        text-decoration: underline;
+        float: none !important;
+        transition: all 0.35s ease;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    float: none;
+    width: 100%;
+}
+
+.u-column1.col-1, .u-column2.col-2 {
+    padding-top: 35px;
+
+    h2 {
+        @extend .bold, .t-xxg, .t-def, .margin-xs;
+    }
+
+    input {
+        &:not([type='checkbox']) {
+            @extend .field-basic;
+        }
+    }
+
+    label {
+        display: block;
+        @extend .t-r, .t-def;
+    }
+
+    button {
+        @extend .btn-primary, .t-white, .upper, .bold;
+    }
+}
+
+.u-column2.col-2 {
+    button {
+        margin-left: auto;
+        margin-top: 20px;
+        display: block;
+        max-width: 200px;
+    }
+}
+
+.woocommerce-LostPassword.lost_password {
+    text-align: right;
+    text-decoration: underline;
+
+    a {
+        color: $primary;
+        @extend .transitioned-basic;
+
+        &:hover {
+            color: $primaryL30;
+        }
+    }
+}
+
+.woocommerce-address-fields {
+    input, select {
+        &:not([type='checkbox']), &:not([type='radio']) {
+            @extend .field-basic;
+        }
+    }
+
+    option {
+        @extend .t-r;
+    }
+
+    .select2-container--default .select2-selection--single {
+        @extend .field-basic;
+    }
+
+    .select2-container--default .select2-results>.select2-results__options {
+        font-size: 16px !important;
+    }
+
+    button {
+        @extend .btn-primary, .t-white, .upper;
+        max-width: 250px;
+        color: #FFF !important;
+        display: block !important;
+        margin-left: auto !important;
+        background-color: $primary !important;
+    }
+}
+
+.account-content-wrapper {
+    input, select {
+        @extend .field-basic;
+    }
+}
+
+.woocommerce table.my_account_orders, table.woocommerce-table.woocommerce-table--order-details.shop_table.order_details {
+    @extend .t-r, .t-def;
+
+    @media $tablet-max {
+        margin-top: 10px;
+    }
+}
+
+#customer_login {
+    @media $small-desktop-min {
+        @extend .flexed, .spaced, .start;
+        min-height: 60vh;
+        padding-top: 3.5vh;
+    }
+
+    [class*='col-'] {
+        @media $small-desktop-min {
+            width: 47.5%;
+            padding: 15px;
+            background-color: #fafafa;
+            border: 1px solid #e1e1e1;
+            box-shadow: 0 0 10px 0 rgba(#000, 0.15);
+            border-radius: 10px;
+        }
+
+        form {
+            & > p {
+                & + p {
+                    @media $small-desktop-min {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .woocommerce-form-login__submit {
+        display: block;
+        margin-left: auto;
+        max-width: 200px;
+    }
+
+    .woocommerce-LostPassword.lost_password {
+        @extend .t-s;
+    }
+
+    .woocommerce-privacy-policy-text {
+        @extend .t-def, .t-s, .margin-xs;
+        margin-top: 25px;
+    }
+}
+
+.woocommerce-EditAccountForm {
+    p {
+        &:not(:first-of-type) {
+            @media $small-desktop-min {
+                margin-top: 1vh;
+                padding-top: .5vh;
+            }
+        }
+
+        span {
+            @extend .t-s;
+        }
+    }
+
+    input {
+        &:not([type='radio']):not([type='checkbox']):not([type='range']) {
+            @extend .field-primary;
+            margin-top: 10px;
+
+            &[name='account_display_name'] {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    button.woocommerce-Button {
+        @extend .btn-primary, .t-white, .bold, .ml-auto, .upper;
+    }
+}

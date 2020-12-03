@@ -39,6 +39,8 @@ class BDL_bootstrapping
 
 		// Widgets 
 		// add_action( 'widgets_init', [$this, 'register_theme_widgets'] );
+
+		add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
     }
 
 	public function set_base_path($path)
@@ -93,10 +95,13 @@ class BDL_bootstrapping
 		if ( function_exists('add_theme_support') ) {
 			add_theme_support('post-thumbnails');
 			add_theme_support( 'woocommerce' );
-			add_theme_support( 'wc-product-gallery-zoom' );
-			add_theme_support( 'wc-product-gallery-lightbox' );
+			// add_theme_support( 'wc-product-gallery-zoom' );
+			// add_theme_support( 'wc-product-gallery-lightbox' );
 		}
 
+		if ( post_type_exists( 'product' ) ) {
+			add_post_type_support( 'product', 'author' );
+		}
     }
 
     public function register_theme_menus()
